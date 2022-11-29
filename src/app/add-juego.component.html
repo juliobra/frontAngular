@@ -1,0 +1,44 @@
+<div class ="container px-8 py-4">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Agreagr un juego a la biblioteca</h1>
+
+      <form class="mt-4" (ngSubmit)="onCreate()" #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre de juego</label>
+          <input type="text" maxlength="70" class="form-control"
+                  id="nombre" name="nombre" [(ngModel)]="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="plataformaConsola">Nombre de plataforma o Consola</label>
+          <input type="text" maxlength="70" class="form-control"
+                  id="plataformaConsola" name="plataformaConsola" [(ngModel)]="plataformaConsola" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">empresa</label>
+          <input type="text" maxlength="70" class="form-control"
+                  id="empresa" name="empresa" [(ngModel)]="empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="anio">anio</label>
+          <input type="number" maxlength="4" class="form-control"
+                  id="anio" name="anio" [(ngModel)]="anio" required>
+        </div>
+        <div class="form-group">
+          <label for="mundoAbierto">¿Mundo Abierto?</label>
+          <br>
+          <input type="radio" name="mundoAbierto" ng-control="mundoAbierto" value="true"
+          [(ngModel)]="mundoAbierto" required>Si
+          <br>
+          <input type="radio" name="mundoAbierto" ng-control="mundoAbierto" value="false"
+          [(ngModel)]="mundoAbierto" required>No
+          <br>
+        <button class="btn btn-primary mb-2">
+          Agregar Juego
+        </button>
+        </div>
+      </form>
+    </div>
+
+</div>
+</div>
